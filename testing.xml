@@ -1,9 +1,22 @@
-<suite name="OrangeHRM Test Suite">
-    <test name="Login and Claim Tests">
+<suite name="OrangeHRM Tests">
+    <test name="Login Test">
         <classes>
-            <class name="tests.LoginTest"/>
-            <class name="tests.ClaimTest"/>
-            <class name="tests.ClaimCreateTest"/>
+            <class name="org.test.LoginTest"/>
+        </classes>
+    </test>
+    <test name="Claim Test">
+        <classes>
+            <class name="org.test.ClaimTest"/>
+        </classes>
+    </test>
+    <test name="Claim Check Test">
+        <classes>
+            <class name="org.test.ClaimCreateTest"/>
+        </classes>
+    </test>
+    <test name="Logout Test">
+        <classes>
+            <class name="org.test.LogoutTest"/>
         </classes>
     </test>
 </suite>

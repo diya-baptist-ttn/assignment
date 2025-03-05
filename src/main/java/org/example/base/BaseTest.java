@@ -17,7 +17,7 @@ public class BaseTest {
         driver.get(baseUrl);
     }
 
-    public void tearDown() {
+    public void Quit() {
         if (driver != null) {
             driver.quit();
         }

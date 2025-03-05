@@ -6,22 +6,28 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.example.pages.LoginPage;
+import org.example.pages.LogoutPage;
 
-public class LoginTest extends BaseTest {
+public class LogoutTest extends BaseTest {
     LoginPage loginPage;
+    LogoutPage logoutPage;
 
     @BeforeMethod
     public void setUpTest() {
         setup();
         loginPage = new LoginPage(driver);
-    }
+        logoutPage = new LogoutPage(driver);
 
-    @Test
-    public void testLogin() {
+        // Login first
         loginPage.enterUsername(username);
         loginPage.enterPassword(password);
         loginPage.clickLogin();
-        Assert.assertTrue(loginPage.isLoginSuccessful(), "Login failed!");
+    }
+
+    @Test
+    public void testLogout() {
+        logoutPage.logout();
+        Assert.assertTrue(logoutPage.isLogoutSuccessful(), "Logout failed!");
     }
 
     @AfterMethod
