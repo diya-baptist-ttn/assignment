@@ -1,0 +1,9 @@
+<suite name="OrangeHRM Test Suite">
+    <test name="Login and Claim Tests">
+        <classes>
+            <class name="tests.LoginTest"/>
+            <class name="tests.ClaimTest"/>
+            <class name="tests.ClaimCreateTest"/>
+        </classes>
+    </test>
+</suite>
